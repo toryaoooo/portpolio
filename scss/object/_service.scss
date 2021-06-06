@@ -1,0 +1,137 @@
+.service {
+  background-image: url(https://toryaoooo.github.io/portpolio/image/bgi01.png);
+  .inner {
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 30px;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include overTab {
+      flex-direction: row;
+      margin: 0 20px;
+    }
+  }
+
+  .service-item {
+    @include overTab {
+      top: 0;
+      left: 0;
+
+      +.service-item {
+        padding-left: 20px;
+      }
+    }
+
+    .title {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      text-align: center;
+      font-size: 18px;
+
+      @include overTab {
+        font-size: 20px;
+      }
+    }
+
+
+    .opacity {
+      background-color: rgba(112, 107, 107, 0.2);
+      border-radius: 15px;
+      padding: 10px;
+      height: auto;
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      display: flex;
+        flex-flow: column-reverse;
+      @include overTab {
+        top: 0;
+        margin: 0 0;
+        width: 26vw;
+      }
+
+
+      .text {
+        .desc {
+          font-size: 15px;
+          margin: 0 20px;
+
+          @include overTab {
+            font-size: 18px;
+          }
+        }
+
+        .title {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-size: 18px;
+        }
+
+        .plan {
+          font-size: 15px;
+          text-align: center;
+
+          @include overTab {
+            font-size: 18px;
+          }
+        }
+
+        span {
+          color: cl(red);
+        }
+      }
+
+      .image {
+        margin: 0 auto;
+      }
+
+      img {
+        width: 70vw;
+        border-radius: 10px;
+
+        @include overTab {
+          width: 25vw;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .for-ex {
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+    width: 90vw;
+    margin: 0 auto;
+
+    .text {
+      font-size: 15px;
+
+      br {
+        display: none;
+
+        @include overTab {
+          display: block;
+        }
+      }
+
+      @include overTab {
+        font-size: 18px;
+      }
+    }
+
+    .desc {
+      padding-top: 20px;
+      font-size: 15px;
+      color: cl(red);
+
+      @include overTab {
+        font-size: 18px;
+      }
+    }
+  }
+}

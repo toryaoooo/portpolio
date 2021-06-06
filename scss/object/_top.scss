@@ -1,0 +1,51 @@
+.top {
+  background-image: url(https://toryaoooo.github.io/portpolio/image/top.sp01.png);
+  background-position: center;
+  background-size: cover;
+  height: 670px;
+  margin-top: 80px;
+  position: relative;
+  @include overTab {
+    background-image: url(https://toryaoooo.github.io/portpolio/image/top01.png);
+    height: 800px;
+  }
+  .top-link {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.top-title {
+  position: relative;
+  background-color: rgba(112, 107, 107, 0.5);
+  top: 50%;
+  left: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 94%;
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 15px;
+  @include overTab {
+    width: 700px;
+  }
+}
+
+.title-main {
+  color: cl(white);
+  text-align: center;
+  width: 100%;
+  font-size: 23px;
+  @include overTab {
+    font-size: 38px;
+  }
+}
+
+.title-sub {
+  text-align: center;
+  color: cl(white);
+  padding-top: 25px;
+  font-size: 17px;
+@include overTab {
+  font-size: 25px;
+}
+}

@@ -1,0 +1,235 @@
+.header {
+  .inner {
+  .header-fixed {
+    background-color: cl(lightgrey);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 2;
+  }
+
+  .header-logo {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 70px;
+    margin-left: 30px;
+
+    .logo-anim {
+      position: relative;
+      z-index: 10;
+
+      &:after {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: cl(black);
+        z-index: -1;
+        transition: .4s;
+      }
+    }
+
+    &:hover .logo-anim:after {
+      width: 100%;
+    }
+  }
+
+  .nav-btn {
+    width: 52px;
+    height: 30px;
+    position: relative;
+    appearance: none;
+    background: transparent;
+    border: none;
+    font: inherit;
+    outline: none;
+    right: 30px;
+
+    @include overTab {
+      display: none;
+    }
+
+    &.-active {
+      span {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: transform 0.3s ease;
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transition: opacity .3s;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: cl(grey);
+      display: block;
+      transition: transform 0.3s ease;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      &:last-child {
+        bottom: 0;
+      }
+    }
+  }
+
+
+
+
+
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    transition: opacity 0.3s ease;
+    background-color: cl(lightgrey);
+    visibility: hidden;
+    z-index: 1;
+    background-image: url(https://toryaoooo.github.io/portpolio/image/bgi01.png);
+    @include overTab {
+      opacity: 1;
+      width: initial;
+      height: 0;
+      left: inherit;
+      background-image: none;
+      background-color: transparent;
+      padding-top: 0;
+      z-index: 3;
+      right: 0;
+      top: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.-active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  .nav-wrap {
+    padding-top: 200px;
+    height: 2000px;
+    background: rgba(255, 255, 255, 0.5);
+
+    @include overTab {
+      background: cl(lightgrey);
+      padding-top: 0;
+      height: auto;
+    }
+  }
+
+
+
+  .nav-list {
+    text-align: center;
+
+    @include overTab {
+      display: flex;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+
+    .ex {
+      color: cl(white);
+      background-color: cl(yellow);
+      border-radius: 2rem;
+      padding: 10px;
+      width: 300px;
+      font-size: 25px;
+      transform: translate3d(0, 0, 0);
+      @include overTab {
+        font-size: 18px;
+      }
+      &:hover {
+        transition: .8s;
+        color: cl(black);
+        opacity: 0.5;
+      }
+
+      backface-visibility:hidden
+    }
+
+    .item {
+      +.item {
+        margin-top: 20px;
+
+        @include overTab {
+          margin-top: 0;
+          margin-left: 20px;
+        }
+      }
+
+      &:last-child {
+        margin-top: 30px;
+
+        @include overTab {
+          margin-top: 0;
+        }
+      }
+
+      .anm {
+        position: relative;
+        z-index: 10;
+        font-size: 25px;
+
+        @include overTab {
+          font-size: 18px;
+        }
+
+        &:after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -10px;
+          width: 0%;
+          height: 2px;
+          background-color: cl(black);
+          z-index: -1;
+          transition: .4s;
+        }
+      }
+
+      &:hover .anm:after {
+        width: 100%;
+      }
+
+    }
+  }
+}
+}

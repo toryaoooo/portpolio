@@ -1,0 +1,49 @@
+.features {
+  background-image: url(https://toryaoooo.github.io/portpolio/image/bgi01.png);
+
+  .inner {
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 80px;
+  }
+
+  .features-list {}
+
+  .features-item {
+    display: flex;
+    flex-flow: column-reverse;
+    padding-top: 50px;
+    .desc {
+      text-align: center;
+      justify-content: center;
+      padding-bottom: 30px;
+      font-size: 18px;
+      padding: 0 20px;
+      @include overTab {
+      font-size: 20px;
+      }
+      br {
+        display: none;
+        @include overTab {
+          display: block;
+        }
+      }
+      span {
+        color: cl(red);
+      }
+    }
+    .image {
+      margin-bottom: 20px;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      width: 300px;
+      height: auto;
+      @include overTab {
+        width: 40%;
+      }
+    }
+  }
+}

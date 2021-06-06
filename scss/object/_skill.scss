@@ -1,0 +1,76 @@
+.skill {
+  background-image: url(https://toryaoooo.github.io/portpolio/image/bgi01.png);
+
+  .inner {
+    padding-bottom: 40px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .title {
+    padding-bottom: 30px;
+  }
+
+  .opacity {
+    padding-top: 30px;
+    background-color: rgba(112, 107, 107, 0.2);
+    border-radius: 15px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 2;
+
+    @include overTab {
+      width: 95%;
+    }
+  }
+
+  .rec {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include overTab {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .rec-item {
+    display: flex;
+    flex-flow: column-reverse;
+    margin: 0 auto;
+    +.rec-item {
+      padding-top: 30px;
+      @include overTab {
+      margin-left: 30px;
+    }
+    }
+
+  }
+
+
+  .desc {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 15px;
+
+    @include overTab {
+      font-size: 18px;
+    }
+  }
+
+  .image {
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    @include overTab {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+}

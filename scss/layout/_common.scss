@@ -1,0 +1,49 @@
+
+
+.cmn-title {
+  text-align: center;
+  display: block;
+  color: cl(black);
+  font-size: 30px;
+
+  @include overTab {
+    font-size: 40px;
+  }
+}
+
+.cmn-link {
+  a {
+    position: relative;
+    color: cl(white);
+    background-color: cl(yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    width: 300px;
+    margin-bottom: 20px;
+    top: 0;
+    right: 50%;
+    left: 50%;
+    transition: .4s;
+    transform: translateX(-50%) translateY(50%);
+    font-size: 22px;
+    &:hover {
+      opacity: .6;
+      color: cl(black);
+    }
+
+    @include overTab {
+      width: 400px;
+      padding: 10px 0;
+      font-size: 30px;
+      margin-bottom: 40px;
+
+
+
+
+
+
+    }
+  }
+}

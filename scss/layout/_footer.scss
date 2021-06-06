@@ -1,0 +1,15 @@
+.footer {
+  background-image: url(https://toryaoooo.github.io/portpolio/image/bgi01.png);
+
+  .inner {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .copyright {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 10px;
+    @include overTab {
+      font-size: 15px;
+    }
+  }
+}

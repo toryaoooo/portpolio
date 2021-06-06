@@ -1,0 +1,66 @@
+// COLORS
+// @include cl(black);
+//--------------------------------------------------
+$colors: (
+  white: #fff,
+  black: #000,
+  text: #333333,
+  grey: #6E6E6E,
+  lightgrey: #F2F2F2,
+  red: #FF0000,
+  blue: rgb(47, 22, 192),
+  yellow: rgb(221, 224, 0)
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
+
+// FONT
+// @include TimesNewRoman;
+//--------------------------------------------------
+
+@mixin TimesNewRoman {
+  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+}
+
+@function get_vw($size, $viewport: 1440) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size: 10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+// RESPONSIVE
+// @include overTab
+//--------------------------------------------------
+
+@mixin overTab {
+  @media print,
+  screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// UTILITY
+//--------------------------------------------------
+
+._sp {
+  @include overTab {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+
+  @include overTab {
+    display: block;
+  }
+}
+html,body {
+  scroll-padding-top: 100px;
+}
